@@ -2,4 +2,7 @@
     <string name="app_name">Resep Masakan</string>
     <string name="nama_masakan">Nama Masakan :</string>
     <string name="detail_text">Detail :</string>
+    <string name="nama_pandu_wijaya">Nama : Pandu Wijaya</string>
+    <string name="email_wijayapandu388_gmail_com">Email : wijayapandu388@gmail.com</string>
+    <string name="name_about">About</string>
 </resources>

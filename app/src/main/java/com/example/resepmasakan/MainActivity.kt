@@ -1,7 +1,11 @@
 package com.example.resepmasakan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,4 +23,23 @@ class MainActivity : AppCompatActivity() {
 
         val
     }
+    override fun onCreateOptionsMenu(menu: Menu?):Boolean{
+        val inflater:MenuInflater=menuInflater
+        inflater.inflate(R.menu.option_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        when(item.itemId){
+            R.id.btnAbout -> {
+                val moveIntent = Intent(this@MainActivity, About::class.java)
+                startActivity(moveIntent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
 }

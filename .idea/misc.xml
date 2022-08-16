@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout-sw600dp/fragment_about.xml" value="0.1" />
         <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/activity_about.xml" value="0.22" />
-        <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/fragment_about.xml" value="0.18" />
         <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/layout/layout_daftar_resep.xml" value="0.20416666666666666" />
         <entry key="..\:/00 - ME/MASTER (E)/08-Project Kotlin (Individu)/DICODING PEMULA/ResepMasakan/app/src/main/res/menu/option_menu.xml" value="0.203125" />
       </map>

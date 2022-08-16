@@ -7,4 +7,6 @@
     <string name="name_about">About</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Nama_resep">Nama Resep</string>
+    <string name="Detail_resep">Detail</string>
 </resources>

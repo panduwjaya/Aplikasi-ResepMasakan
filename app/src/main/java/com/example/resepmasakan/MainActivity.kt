@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -26,31 +27,37 @@ class MainActivity : AppCompatActivity() {
 //        val
 //    }
 
-    private lateinit var rvHeroes: RecyclerView
+    private lateinit var rvResep: RecyclerView
     private var list: ArrayList<Resep> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvHeroes = findViewById(R.id.rv_heroes)
-        rvHeroes.setHasFixedSize(true)
+        rvResep = findViewById(R.id.rv_resep)
+        rvResep.setHasFixedSize(true)
 
         list.addAll(ResepData.listDataResep)
         showRecyclerList()
     }
 
     private fun showRecyclerList() {
-        rvHeroes.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = ListHeroAdapter(list)
-        rvHeroes.adapter = listHeroAdapter
+        rvResep.layoutManager = LinearLayoutManager(this)
+        val listResepAdapter = ResepAdapter(list)
+        rvResep.adapter = listResepAdapter
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.option_menu, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?):Boolean{
         val inflater:MenuInflater=menuInflater
         inflater.inflate(R.menu.option_menu,menu)
         return true
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean{
         when(item.itemId){
@@ -64,5 +71,20 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+//BATAS
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        setMode(item.itemId)
+//        return super.onOptionsItemSelected(item)
+//    }
+//
+//    private fun setMode(selectedMode: Int) {
+//        when (selectedMode) {
+//            R.id.btnAbout -> {
+//                val moveIntent = Intent(this@MainActivity, About::class.java)
+//                startActivity(moveIntent)
+//            }
+//        }
+//    }
 
 }

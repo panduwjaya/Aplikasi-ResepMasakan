@@ -7,11 +7,12 @@
 
     <FrameLayout
         android:id="@+id/container"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_heroes"
+        android:id="@+id/rv_resep"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/layout_daftar_resep" />

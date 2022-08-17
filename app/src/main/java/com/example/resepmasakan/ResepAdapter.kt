@@ -1,5 +1,6 @@
 package com.example.resepmasakan
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,16 @@ class ResepAdapter(private val listResep: ArrayList<Resep>): RecyclerView.Adapte
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+        
+        fun bind(resep: Resep){
+            itemView.setOnClickListener{
+                itemView.setOnClickListener{
+                    val intent = Intent(itemView.context,DetailResepActivity :: class.java)
+                    intent.putExtr(DetailResepActivity.KEY_RESEP,resep)
+                    itemView.context.startActivity(intent)
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent:ViewGroup,viewType:Int):ResepAdapter.MyViewHolder {

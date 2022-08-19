@@ -13,19 +13,9 @@ import com.bumptech.glide.request.RequestOptions
 class ResepAdapter(private val listResep: ArrayList<Resep>): RecyclerView.Adapter<ResepAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        
-        fun bind(resep: Resep){
-            itemView.setOnClickListener{
-                itemView.setOnClickListener{
-                    val intent = Intent(itemView.context,DetailResepActivity :: class.java)
-                    intent.putExtr(DetailResepActivity.KEY_RESEP,resep)
-                    itemView.context.startActivity(intent)
-                }
-            }
-        }
+        var tvName: TextView = itemView.findViewById(R.id.tv_name)
+        var tvDetail: TextView = itemView.findViewById(R.id.tv_detail)
+        var imgPhoto: ImageView = itemView.findViewById(R.id.item_photo)
     }
 
     override fun onCreateViewHolder(parent:ViewGroup,viewType:Int):ResepAdapter.MyViewHolder {
@@ -41,6 +31,18 @@ class ResepAdapter(private val listResep: ArrayList<Resep>): RecyclerView.Adapte
             .into(holder.imgPhoto)
         holder.tvName.text = resep.nama
         holder.tvDetail.text = resep.detail
+
+        holder.itemView.setOnClickListener {
+            val items = Resep(
+                listResep[position].nama,
+                listResep[position].detail,
+                listResep[position].photo
+            )
+
+            val moveWithObjectIntent = Intent(holder.itemView.context, DetailResep::class.java)
+            moveWithObjectIntent.putExtra(DetailResep.EXTRA_RESEP, items)
+            holder.itemView.context.startActivity(moveWithObjectIntent)
+        }
     }
 
     override fun getItemCount(): Int {

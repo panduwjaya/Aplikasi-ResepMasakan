@@ -12,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 
 class ResepAdapter(private val listResep: ArrayList<Resep>): RecyclerView.Adapter<ResepAdapter.MyViewHolder>() {
 
+    // membuat adapter penghubung antara MainActivity dengan yang lainnya
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_name)
         var tvDetail: TextView = itemView.findViewById(R.id.tv_detail)
